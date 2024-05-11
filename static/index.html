@@ -1,65 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://cache.aqco.top/static/css/404min.css">
-    <link rel="shortcut icon" href="https://cache.aqco.top/static/img/favicon.ico">
-    <title>没有找到你要的页面 - 少年</title>
+    <meta charset="utf-8">
+    <title>椛椛API - Motd</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="椛椛API - Motd">
+    <meta name="keywords" content="椛椛,椛椛吖 - Motd">
+    <meta itemprop="name" content="椛椛API - Motd" />
+    <meta itemprop="image" content="https://cache.aqco.top/static/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cache.aqco.top/static/img/favicon.ico">
+    <link rel="icon" href="https://cache.aqco.top/static/img/favicon.ico">
+    <!-- css -->
+    <link href="//cache.aqco.top/main/css/APlayer.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cache.aqco.top/main/css/onlinewebfonts.css" />
+    <link rel="stylesheet" type="text/css" href="//cache.aqco.top/main/css/vno.css">
+    <link rel="stylesheet" type="text/css" href="//cache.aqco.top/main/css/iconfont.css">
 </head>
 
 <body>
-    <div class="box">
-        <div class="box__ghost">
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="symbol"></div>
-            <div class="symbol"></div>
+    <span class="mobile btn-mobile-menu">
+        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
+        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
+    </span>
+    <header id="panel" class="panel-cover">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <div class="ih-item circle effect right_to_left">
+                        <a href="#" title="" class="blog-button">
+                            <div class="img"><img src="//q1.qlogo.cn/g?b=qq&nk=836447856&s=640" alt="img"
+                                    class="js-avatar iUp profilepic"></div>
+                            <div class="info iUp">
+                                <div class="info-back">
+                                    <h2>
 
-            <div class="box__ghost-container">
-                <div class="box__ghost-eyes">
-                    <div class="box__eye-left"></div>
-                    <div class="box__eye-right"></div>
-                </div>
-                <div class="box__ghost-bottom">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                                        花花
+
+                                    </h2>
+                                    <p>
+
+                                        2024 · 坚持
+
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <a href="#" title="Dmego Home">花花</a>
+                    </h1>
+                    <hr class="panel-cover__divider iUp" />
+                    <p id="description" class="panel-cover__description iUp"></p>
+                    <div class="navigation-wrapper iUp">
+                        <div>
+                            <nav class="cover-navigation cover-navigation--primary">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href=/bds/ class="blog-button"> 文档</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="iUp">
+                            <nav class="cover-navigation navigation--social">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="https://github.com/xrcuo" title="github" target="_blank">
+                                            <i class='social iconfont icon-github'></i>
+                                            <span class="label">github</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="box__ghost-shadow"></div>
+            <div class="panel-cover--overlay cover-slate"></div>
         </div>
+    </header>
+    <script type="text/javascript" src="//cache.aqco.top/main/js/main.js"></script>
+    <script type="text/javascript" src="//cache.aqco.top/main/json/images.json?cb=getBingImages"></script>
 
-        <div class="box__description">
-            <div class="box__description-container">
-                <div class="box__description-title">404</div>
-                <div class="box__description-text">这里不是你该来的地方，赶紧回去吧!</div>
-            </div>
-
-            <a href="/" class="box__button">返回</a>
-        </div>
-    </div>
-    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-        var pageX = $(document).width();
-        var pageY = $(document).height();
-        var mouseY = 0;
-        var mouseX = 0;
-
-        $(document).mousemove(function (event) {
-            mouseY = event.pageY;
-            yAxis = ((pageY / 2 - mouseY) / pageY) * 300;
-            mouseX = event.pageX / -pageX;
-            xAxis = -mouseX * 100 - 100;
-
-            $(".box__ghost-eyes").css({
-                transform: "translate(" + xAxis + "%,-" + yAxis + "%)",
-            });
-        });
-    </script>
 </body>
+
+<div id="fps" style="z-index:999;position:fixed;bottom:3px;right:3px;color:#FFF;font-size:15px;"></div>
+<div id="player" style="z-index:1000;"></div>
+<!-- JS -->
+<script type="text/javascript" src="//cache.aqco.top/static/Maqco/js/ping.min.js"></script>
+<script src="//cache.aqco.top/static/Maqco/js/jquery.min.js"></script>
+<script src="//cache.aqco.top/main/js/APlayer.min.js"></script>
+<script src="./js/min.js"></script>
 
 </html>
