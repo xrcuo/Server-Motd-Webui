@@ -1,0 +1,65 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cache.aqco.top/static/css/404min.css">
+    <link rel="shortcut icon" href="https://cache.aqco.top/static/img/favicon.ico">
+    <title>没有找到你要的页面 - 少年</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box__ghost">
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+            <div class="symbol"></div>
+
+            <div class="box__ghost-container">
+                <div class="box__ghost-eyes">
+                    <div class="box__eye-left"></div>
+                    <div class="box__eye-right"></div>
+                </div>
+                <div class="box__ghost-bottom">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="box__ghost-shadow"></div>
+        </div>
+
+        <div class="box__description">
+            <div class="box__description-container">
+                <div class="box__description-title">404</div>
+                <div class="box__description-text">这里不是你该来的地方，赶紧回去吧!</div>
+            </div>
+
+            <a href="/" class="box__button">返回</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        var pageX = $(document).width();
+        var pageY = $(document).height();
+        var mouseY = 0;
+        var mouseX = 0;
+
+        $(document).mousemove(function (event) {
+            mouseY = event.pageY;
+            yAxis = ((pageY / 2 - mouseY) / pageY) * 300;
+            mouseX = event.pageX / -pageX;
+            xAxis = -mouseX * 100 - 100;
+
+            $(".box__ghost-eyes").css({
+                transform: "translate(" + xAxis + "%,-" + yAxis + "%)",
+            });
+        });
+    </script>
+</body>
+
+</html>
