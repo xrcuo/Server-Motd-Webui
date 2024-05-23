@@ -62,7 +62,7 @@ func Ip(ipx string) (H ZW, err error) {
 	json.Unmarshal([]byte(body), &M)
 	H.Code = M.Code
 	H.Msg = M.Msg
-	H.Location = M.Data.Location.Area
+	H.Area = M.Data.Location.Area
 	H.Ip = M.Data.Location.Ip
 	return H, err
 }
@@ -71,7 +71,7 @@ type ZW struct {
 	Code string
 	Msg  string
 
-	Ip       string
-	Location string
-	Text     string
+	Ip   string
+	Area string
+	Text string
 }
