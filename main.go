@@ -11,6 +11,15 @@ import (
 //go:embed static
 var Dist embed.FS
 
+// 静态文件处理
+func fileExists(filename string) bool {
+	info, err := os.Stat(filename)
+	if os.IsNotExist(err) {
+		return false
+	}
+	return !info.IsDir()
+}
+
 // 下载
 func Download(url string, ws string) {
 
