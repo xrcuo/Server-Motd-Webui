@@ -1,4 +1,4 @@
-package pbdownload
+package pb_download
 
 import (
 	"fmt"
