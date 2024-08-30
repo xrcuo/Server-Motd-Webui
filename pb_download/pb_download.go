@@ -100,7 +100,7 @@ func (d *Downloader) Download(resource Resource, progress *mpb.Progress) error {
 
 func (d *Downloader) Start() error {
 	d.pool = make(chan *Resource, d.Concurrent)
-	AyaLog.Info("开始下载，当前并发：", d.Concurrent)
+	AyaLog.Info("System", "开始下载，当前并发：", d.Concurrent)
 	p := mpb.New(mpb.WithWaitGroup(d.wg))
 	for _, resource := range d.Resources {
 		d.wg.Add(1)
