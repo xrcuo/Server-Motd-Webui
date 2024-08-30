@@ -4,6 +4,7 @@ go 1.22
 
 require (
 	github.com/gin-gonic/gin v1.10.0
+	github.com/nyancatda/AyaLog v1.0.8
 	github.com/vbauerster/mpb/v5 v5.4.0
 )
 

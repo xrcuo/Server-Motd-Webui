@@ -1,7 +1,6 @@
 package pb_download
 
 import (
-	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -9,6 +8,7 @@ import (
 	"strconv"
 	"sync"
 
+	"github.com/nyancatda/AyaLog"
 	"github.com/vbauerster/mpb/v5"
 	"github.com/vbauerster/mpb/v5/decor"
 )
@@ -100,7 +100,7 @@ func (d *Downloader) Download(resource Resource, progress *mpb.Progress) error {
 
 func (d *Downloader) Start() error {
 	d.pool = make(chan *Resource, d.Concurrent)
-	fmt.Println("开始下载，当前并发：", d.Concurrent)
+	AyaLog.Info("开始下载，当前并发：", d.Concurrent)
 	p := mpb.New(mpb.WithWaitGroup(d.wg))
 	for _, resource := range d.Resources {
 		d.wg.Add(1)
